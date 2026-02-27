@@ -1,0 +1,64 @@
+#Create your project & virtual env
+    # In a folder where you keep projects:
+    mkdir C:\Python_Playwrite
+    cd C:\Python_Playwrite
+
+    # Create & activate venv
+    python -m venv .venv
+    .venv\Scripts\activate
+
+2 - Upgrade pip:
+    python -m pip install --upgrade pip
+
+3 - Install packages
+    pip install pytest pytest-playwright
+    python.exe -m pip install --upgrade pip
+    playwright install
+
+4 - For Path A (sync with plugin):
+    pip install pytest-playwright
+
+5 - For Path B (async):
+    pip install pytest-asyncio
+
+6 - Open in VS Code & select interpreter
+
+    Open VS Code → File > Open Folder... → select C:\project file
+    Install the Python extension (Microsoft).
+    Bottom-right (or Command Palette Ctrl+Shift+P → “Python: Select Interpreter”) → choose the .venv you just created.
+
+7 - Configure pytest in VS Code
+Create .vscode/settings.json:
+
+{
+  "python.testing.pytestEnabled": true,
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestArgs": [
+    "-q"
+  ]
+}
+
+8 - Pytest config
+    Create pytest.ini in the project root:
+
+        [pytest]
+        addopts = -q -s
+        testpaths = tests
+        python_files = test_*.py *_test.py
+        asyncio_mode = strict
+
+9 - Create the tests folder:
+
+        mkdir tests
+
+Run script - pytest -s -v tests/test_xces_run.py -m sanity
+
+User Creation Done for Test data
+User - 
+testdemo001@mailinator.com
+- 004 Done
+
+execute with video
+pytest --video=true
+
+Vendor - 
